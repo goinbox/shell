@@ -58,14 +58,14 @@ func TestRsync(t *testing.T) {
 	}
 }
 
-func TestGetParamsFromShell(t *testing.T) {
+func TestParamsFromShell(t *testing.T) {
 	shell := "testdata/params.sh"
 	paramMap := map[string]string{
 		"user_name": "user_name",
 		"nick_name": "nick_name",
 		"user_sex":  "sex",
 	}
-	params := GetParamsFromShell(shell, paramMap)
+	params := ParamsFromShell(shell, paramMap)
 	if len(params) != len(paramMap) {
 		t.Errorf("params count from shell error, expect %d, got %d", len(paramMap), len(params))
 	}

@@ -95,7 +95,7 @@ func MakeRsyncCmd(sou string, dst string, excludeFrom string, timeout int) strin
 //keyMap := map[string]string{
 //	 "param_key" : "shell_key"
 //}
-func GetParamsFromShell(shell string, keyMap map[string]string) map[string]string {
+func ParamsFromShell(shell string, keyMap map[string]string) map[string]string {
 	type psk struct {
 		paramKey string
 		shellKey string
